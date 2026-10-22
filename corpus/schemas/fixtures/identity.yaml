@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
+# Identity cases (TODO.v2/16 M0): structure → InChI/InChIKey recorded
+# from the IUPAC oracle (inchi-1, the reference implementation). The
+# oracle is a development-time test oracle only — the corpus ships
+# strings, never the binary. molfile is verbatim V2000 as fed to the
+# oracle; native derivations must reproduce these byte-exactly.
+---
+$id: https://github.com/asciichem/asciichem-tests/v1/fixtures/identity
+title: AsciiChem identity fixture
+type: object
+required: [id, structureClass, molfile, inchi, inchikey]
+additionalProperties: false
+properties:
+  id:
+    type: string
+    pattern: "^[a-z0-9][a-z0-9/-]*$"
+  tags:
+    type: array
+    items: { type: string }
+  since:
+    type: string
+  structureClass:
+    type: string
+    description: >-
+      Coverage class the case exists for (simple, ring, charge,
+      isotope, stereo-tetrahedral, drug, ...).
+  smiles:
+    type: string
+    description: The SMILES the model was ingested from (provenance).
+  molfile:
+    type: string
+    description: Verbatim V2000 molfile piped to the oracle.
+  inchi:
+    type: string
+    pattern: "^InChI=1S/"
+    description: Standard InChI recorded from the oracle.
+  inchikey:
+    type: string
+    pattern: "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"
+    description: Standard InChIKey recorded from the oracle.

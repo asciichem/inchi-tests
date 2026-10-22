@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+      - name: Corpus is well-formed JSON and schema-consistent
+        run: |
+          ruby -rjson -e '
+            require "json"
+            cases = JSON.parse(File.read("corpus/fixtures/identity.json"))
+            abort "empty corpus" if cases.empty?
+            ids = cases.map { |c| c.fetch("id") }
+            abort "duplicate ids" if ids.uniq.length != ids.length
+            cases.each do |c|
+              %w[molfile inchi inchikey].each do |k|
+                abort "#{c["id"]}: missing #{k}" unless c[k].is_a?(String) && !c[k].empty?
+              end
+              abort "#{c["id"]}: bad inchi prefix" unless c["inchi"].start_with?("InChI=1S/")
+              abort "#{c["id"]}: bad inchikey" unless c["inchikey"] =~ /\A[A-Z]{14}-[A-Z]{10}-[A-Z]\z/
+            end
+            puts "OK: #{cases.length} identity fixtures"
+          '
