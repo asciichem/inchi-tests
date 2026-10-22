@@ -44,7 +44,10 @@ SEEDS = {
   'glycine' => ['NCC(=O)O', 'amino-acid'],
   'urea' => ['NC(=O)N', 'simple'],
   'sulfuric-acid' => ['OS(=O)(=O)O', 'heteroatom'],
-  'phosphoric-acid' => ['OP(=O)(O)O', 'heteroatom']
+  'phosphoric-acid' => ['OP(=O)(O)O', 'heteroatom'],
+  'sulfate-2' => ['[O-]S(=O)(=O)[O-]', 'charge-2'],
+  'carbonate-2' => ['[O-]C(=O)[O-]', 'charge-2'],
+  'bicarbonate' => ['OC(=O)[O-]', 'charge']
 }.freeze
 
 bin = ENV.fetch('ASCIICHEM_INCHI_BIN', 'inchi-1')
@@ -61,8 +64,12 @@ SEEDS.each do |name, (smiles, klass)|
     key = txt[/^InChIKey=(\S+)/, 1]
     raise "oracle produced no InChI for #{name}:\n#{txt}" unless inchi && key
 
+    # Mobile-H standardization (oxoanions restructure into the
+    # parent oxoacid, e.g. sulfate -> S(OH)4/p-2) is M3 scope: S/P
+    # fixtures carry the m3 tag and the M1 gates skip them.
+    tags = molecule.atoms.any? { |a| %w[S P].include?(a.element) } ? ['m3'] : []
     rows << { 'id' => "identity/#{name}", 'structureClass' => klass,
-              'smiles' => smiles, 'molfile' => molfile,
+              'tags' => tags, 'smiles' => smiles, 'molfile' => molfile,
               'inchi' => inchi, 'inchikey' => key }
   end
 end
