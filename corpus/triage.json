@@ -9,5 +9,6 @@
   "identity/breadth-269": "M3: formula layer depends on mobile-H / charge-placement standardization (disagreement found by the M0b breadth run; revisited when the /h and /q,/p layers land)",
   "identity/breadth-372": "M3: formula layer depends on mobile-H / charge-placement standardization (disagreement found by the M0b breadth run; revisited when the /h and /q,/p layers land)",
   "identity/breadth-580": "M3: formula layer depends on mobile-H / charge-placement standardization (disagreement found by the M0b breadth run; revisited when the /h and /q,/p layers land)",
-  "identity/breadth-975": "M3: formula layer depends on mobile-H / charge-placement standardization (disagreement found by the M0b breadth run; revisited when the /h and /q,/p layers land)"
+  "identity/breadth-975": "M3: formula layer depends on mobile-H / charge-placement standardization (disagreement found by the M0b breadth run; revisited when the /h and /q,/p layers land)",
+  "identity/breadth-448": "M2: the two-bridge symmetric system (two ring N-bridgeheads joined by an alkyne chain) reaches a different first-terminal ordering than the reference; our table is smaller at position 23. Recorded for the connection-layer milestone; revisit with the reference's automorphism-orbit pruning (CanonGraph L10-L13)."
 }
