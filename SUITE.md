@@ -25,27 +25,32 @@ E/Z tranches). One fixture per structure:
 | `inchikey` | The oracle's standard InChIKey |
 | `structureClass` | The coverage class the case exists for |
 
-## Gate contract (M1 — the formula layer)
+## Gate contract (current)
 
-For every fixture, an engine must emit the formula layer — the
-segment after `InChI=1S/` — byte-identically:
+For every fixture, an engine emits every layer it claims and the
+gate compares each emitted segment to the oracle's recording of that
+layer kind, byte-for-byte — plus the native InChIKey against the
+recorded key. The gate **compares every fixture and classifies the
+result**; no measurement overrides exist:
 
-- Hill order with the InChI twist: carbon first (when present), then
-  hydrogen, then the rest alphabetically; counts omitted when 1.
-- Implicit hydrogens: the MDL H-count code wins (`n` → n−1 H); with
-  code 0 the valence gap fills in (C 4, N 3, O 2, S 6, P 5,
-  halogens/H 1; aromatic bonds count 1.5) — the oracle does the same
-  for code-0 atoms.
-- Charged species are **standardized**: the formula layer is the
-  neutral parent — an anion gains one hydrogen and emits `/p-1`, a
-  cation loses one and emits `/p+1` (ammonium is `H3N` + `/p+1`,
-  hydroxide is `H2O` + `/p-1`).
-- Isotopes do not appear in the formula layer (D counts as H;
-  ¹³C as C) — they belong to the `/i` layer, a later milestone.
+- **pass** — every emitted segment matches and the key reproduces.
+- **expected-failure skip** — the fixture is in `corpus/triage.json`
+  with a dated, decoded reason. Triage entries are debts to retire,
+  never settlements; a triaged fixture that passes again blocks CI
+  (RETIREMENT) until its entry is withdrawn.
+- **isotopic** — an `/i` layer (its own milestone).
+- **beyond-±1** — |charge| > 1 exceeds the ±1 proton
+  standardization both engines implement.
 
-A gate run reports per-fixture pass/fail and must be 100% — a
-failing case is either a bug or a corpus gap, never silently
-skipped.
+Layer rules the corpus pins (M1-era, still standing): Hill order
+with the InChI twist; MDL H-count codes over the valence gap (C 4,
+N 3, O 2, S 6, P 5, halogens/H 1; aromatic 1.5); ±1 proton
+standardization (anion = neutral parent +1 H + `/p-1`, cation −1 H +
+`/p+1`); isotopes invisible to the formula layer. Known open debt
+classes live in triage.json — currently the ichitaut template
+machinery over enolizable chemistry, a formula-H gap at charged
+sites (the salt/charge port), and `/c` ordering ties over bridged
+skeletons.
 
 ## Milestones (TODO.v2/16)
 
