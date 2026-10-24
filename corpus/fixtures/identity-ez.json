@@ -1,0 +1,82 @@
+[
+  {
+    "id": "identity/e-2-butene",
+    "structureClass": "stereo-ez",
+    "tags": [],
+    "molfile": "e-2-butene\n  AsciiChem\n\n  4  3  0  0  0  0  0  0  0  0999 V2000\n   12.0000   85.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C4H8/c1-3-4-2/h3-4H,1-2H3/b4-3+",
+    "inchikey": "IAQRGUVFOMOMEM-ONEGZZNKSA-N"
+  },
+  {
+    "id": "identity/z-2-butene",
+    "structureClass": "stereo-ez",
+    "tags": [],
+    "molfile": "z-2-butene\n  AsciiChem\n\n  4  3  0  0  0  0  0  0  0  0999 V2000\n   12.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C4H8/c1-3-4-2/h3-4H,1-2H3/b4-3-",
+    "inchikey": "IAQRGUVFOMOMEM-ARJAWSKDSA-N"
+  },
+  {
+    "id": "identity/e-2-pentene",
+    "structureClass": "stereo-ez",
+    "tags": [],
+    "molfile": "e-2-pentene\n  AsciiChem\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n   12.0000   85.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  204.0000   51.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\n  4  5  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C5H10/c1-3-5-4-2/h3,5H,4H2,1-2H3/b5-3+",
+    "inchikey": "QMMOXUPEWRXHJS-HWKANZROSA-N"
+  },
+  {
+    "id": "identity/z-2-pentene",
+    "structureClass": "stereo-ez",
+    "tags": [],
+    "molfile": "z-2-pentene\n  AsciiChem\n\n  5  4  0  0  0  0  0  0  0  0999 V2000\n   12.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  204.0000   51.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\n  4  5  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C5H10/c1-3-5-4-2/h3,5H,4H2,1-2H3/b5-3-",
+    "inchikey": "QMMOXUPEWRXHJS-HYXAFXHYSA-N"
+  },
+  {
+    "id": "identity/e-1-2-dichloroethene",
+    "structureClass": "stereo-ez-hetero",
+    "tags": [],
+    "molfile": "e-1-2-dichloroethene\n  AsciiChem\n\n  4  3  0  0  0  0  0  0  0  0999 V2000\n   12.0000   85.0000    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   15.0000    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C2H2Cl2/c3-1-2-4/h1-2H/b2-1+",
+    "inchikey": "KFUSEUYYWQURPO-OWOJBTEDSA-N"
+  },
+  {
+    "id": "identity/z-1-2-dichloroethene",
+    "structureClass": "stereo-ez-hetero",
+    "tags": [],
+    "molfile": "z-1-2-dichloroethene\n  AsciiChem\n\n  4  3  0  0  0  0  0  0  0  0999 V2000\n   12.0000   15.0000    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   15.0000    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C2H2Cl2/c3-1-2-4/h1-2H/b2-1-",
+    "inchikey": "KFUSEUYYWQURPO-UPHRSURJSA-N"
+  },
+  {
+    "id": "identity/e-3-methyl-2-pentene",
+    "structureClass": "stereo-ez-tri",
+    "tags": [],
+    "molfile": "e-3-methyl-2-pentene\n  AsciiChem\n\n  6  5  0  0  0  0  0  0  0  0999 V2000\n   24.0000   86.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   14.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   86.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  204.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\n  4  6  1  0  0  0  0  0\n  3  5  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C6H12/c1-4-6(3)5-2/h4H,5H2,1-3H3/b6-4+",
+    "inchikey": "BEQGRRJLJLVQAQ-GQCTYLIASA-N"
+  },
+  {
+    "id": "identity/z-3-methyl-2-pentene",
+    "structureClass": "stereo-ez-tri",
+    "tags": [],
+    "molfile": "z-3-methyl-2-pentene\n  AsciiChem\n\n  6  5  0  0  0  0  0  0  0  0999 V2000\n   24.0000   86.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   86.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   14.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  204.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\n  4  6  1  0  0  0  0  0\n  3  5  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C6H12/c1-4-6(3)5-2/h4H,5H2,1-3H3/b6-4-",
+    "inchikey": "BEQGRRJLJLVQAQ-XQRVVYSFSA-N"
+  },
+  {
+    "id": "identity/e-2-hexene",
+    "structureClass": "stereo-ez",
+    "tags": [],
+    "molfile": "e-2-hexene\n  AsciiChem\n\n  6  5  0  0  0  0  0  0  0  0999 V2000\n   12.0000   85.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  204.0000   51.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  240.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\n  4  5  1  0  0  0  0  0\n  5  6  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C6H12/c1-3-5-6-4-2/h3,5H,4,6H2,1-2H3/b5-3+",
+    "inchikey": "RYPKRALMXUUNKS-HWKANZROSA-N"
+  },
+  {
+    "id": "identity/z-2-hexene",
+    "structureClass": "stereo-ez",
+    "tags": [],
+    "molfile": "z-2-hexene\n  AsciiChem\n\n  6  5  0  0  0  0  0  0  0  0999 V2000\n   12.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n   60.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  120.0000   50.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  168.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  204.0000   51.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  240.0000   15.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0  0  0  0  0\n  2  3  2  0  0  0  0  0\n  3  4  1  0  0  0  0  0\n  4  5  1  0  0  0  0  0\n  5  6  1  0  0  0  0  0\nM  END\n",
+    "inchi": "InChI=1S/C6H12/c1-3-5-6-4-2/h3,5H,4,6H2,1-2H3/b5-3-",
+    "inchikey": "RYPKRALMXUUNKS-HYXAFXHYSA-N"
+  }
+]
