@@ -13,7 +13,10 @@ identifier strings, never code from the InChI Trust.
 
 ## Corpus
 
-`corpus/fixtures/identity.json` — one fixture per structure:
+`corpus/fixtures/` — one JSON array of fixtures per tranche
+(`identity.json` seeds, `identity-breadth.json` the M0b breadth
+sample, `identity-breadth2.json` the scaling tranche, the stereo and
+E/Z tranches). One fixture per structure:
 
 | Field | Meaning |
 |---|---|
@@ -48,7 +51,9 @@ skipped.
 
 M1 formula layer → M2 `/c` connection layer → M3 `/h`, `/q`, `/p` →
 M4 stereo → M5 InChIKey → bindings. The corpus grows with each
-milestone; scaling to the ≥100k breadth gate is the M0 follow-up.
+milestone: 1559 fixtures through the stereo/E/Z tranches (v0.2.5),
+3559 with the breadth2 scaling tranche (v0.3.0) — the ≥100k target
+continues in further batches of the same harness.
 
 ## Recording
 
@@ -62,3 +67,10 @@ bundle exec ruby ../inchi-tests/scripts/record-identity-oracle.rb > ../inchi-tes
 
 New coverage classes ride a corpus review, never a silent edit —
 fixtures are never weakened to make an engine pass.
+
+`scripts/record-stereo-tranche.rb` records the tetrahedral tranche
+(gem-written wedges); `scripts/record-ez-tranche.rb` the E/Z tranche
+(hand-laid layouts, /b presence asserted). The breadth importer
+records only gem→oracle agreements; disagreements count in the run
+log and surface as triage entries or bug fixes through the engines'
+gates.

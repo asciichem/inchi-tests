@@ -8,8 +8,9 @@
 # triage file — they are writer/parser bugs or standardization gaps,
 # never silently dropped.
 #
-#   ruby scripts/import-pubchem-breadth.rb START STEP CANDIDATES LIMIT OUT.json [TRIAGE.log]
+#   ruby scripts/import-pubchem-breadth.rb START STEP CANDIDATES LIMIT OUT.json [TRIAGE.log] [PREFIX]
 #   ruby scripts/import-pubchem-breadth.rb 1 11 30000 1200 identity-breadth.json
+#   ruby scripts/import-pubchem-breadth.rb 100000 3 8000 2000 identity-breadth2.json - breadth2
 
 require 'net/http'
 require 'json'
@@ -21,7 +22,8 @@ step = ARGV[1].to_i
 candidates = ARGV[2].to_i
 limit = ARGV[3].to_i
 out_path = ARGV[4] or abort "usage: import-pubchem-breadth.rb START STEP CANDIDATES LIMIT OUT.json [TRIAGE.log]"
-triage_path = ARGV[5]
+triage_path = ARGV[5] == '-' ? nil : ARGV[5]
+prefix = ARGV[6] || 'breadth'
 
 cids = (0...candidates).map { |i| start_cid + i * step }
 base = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid'
@@ -102,7 +104,7 @@ triples.each_value do |smiles, pubchem_inchi, pubchem_key|
     next
   end
 
-  rows << { 'id' => "identity/breadth-#{rows.length + 1}", 'structureClass' => 'breadth',
+  rows << { 'id' => "identity/#{prefix}-#{rows.length + 1}", 'structureClass' => 'breadth',
             'tags' => tags, 'smiles' => smiles, 'molfile' => molfile,
             'inchi' => oracle_inchi, 'inchikey' => oracle_key }
 end
