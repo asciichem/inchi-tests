@@ -44,7 +44,10 @@ result**; no measurement overrides exist:
 
 Layer rules the corpus pins (M1-era, still standing): Hill order
 with the InChI twist; MDL H-count codes over the valence gap (C 4,
-N 3, O 2, S 6, P 5, halogens/H 1; aromatic 1.5); ±1 proton
+N 3, O 2, S 6, P 5, halogens/H 1; aromatic 1.5) with cations reading
+the onium table instead (N/P 4, O/S/Se/Te 3 — an all-heavy sulfonium
+or phosphonium carries no riding H, so its charge stays in `/q` with
+no `/p`); ±1 proton
 standardization (anion = neutral parent +1 H + `/p-1`, cation −1 H +
 `/p+1`); isotopes invisible to the formula layer. Known open debt
 classes live in triage.json — currently the ichitaut template
@@ -57,7 +60,8 @@ skeletons.
 M1 formula layer → M2 `/c` connection layer → M3 `/h`, `/q`, `/p` →
 M4 stereo → M5 InChIKey → bindings. The corpus grows with each
 milestone: 1559 fixtures through the stereo/E/Z tranches (v0.2.5),
-3559 with the breadth2 scaling tranche (v0.3.0) — the ≥100k target
+3559 with the breadth2 scaling tranche (v0.3.0), 5559 with the
+breadth3 tranche (v0.3.1) — the ≥100k target
 continues in further batches of the same harness.
 
 ## Recording
