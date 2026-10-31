@@ -1,3 +1,1 @@
-{
-  "identity/breadth2-1611": "M5: charged-group output — the c-group charge walk moved the +1 into the mobile accounting: the oracle drops /q, removes one skeleton H, and emits /p+2 (and, for breadth2-1611, the anionic mobile-group notation (H2-,16,21,22,23)). Root: the MobileGroup output layer carries no charge field and the MarkSaltChargeGroups2 blind merge is not ported; the (DE)PROTONATION slice (2026-10-29) fixed the state and /p for the simple paths. Revisit when the charged-group /h emission lands (inchi-rs task #91)."
-}
+{}
