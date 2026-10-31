@@ -39,8 +39,13 @@ result**; no measurement overrides exist:
   never settlements; a triaged fixture that passes again blocks CI
   (RETIREMENT) until its entry is withdrawn.
 - **isotopic** — an `/i` layer (its own milestone).
-- **beyond-±1** — |charge| > 1 exceeds the ±1 proton
-  standardization both engines implement.
+- **beyond-±1** — an atom carries |charge| > 1, which the
+  reference's GetAtomChargeType refuses to class (ATT_NONE; every
+  charge-exchange quota skips it). The bound is PER-ATOM: totals are
+  a plain signed sum and multi-onium/polyanion totals beyond ±1
+  assemble normally (2026-10-31: the engines' gates track the
+  per-atom bound; the last 29 total-bounded fixtures joined the
+  compared set).
 
 Layer rules the corpus pins (M1-era, still standing): Hill order
 with the InChI twist; MDL H-count codes over the valence gap (C 4,
